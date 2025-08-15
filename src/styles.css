@@ -1,10 +1,45 @@
 @import "tailwindcss";
 
-:root {
-  --bg: #0b0b0b;
-  --card: #121212;
-  --muted: #9aa0a6;
-  --text: #ffffff;
-  --accent: #fc8d36; /* orange */
-  --border: #262626;
+body {
+  background: radial-gradient(
+      1200px 600px at 50% -20%,
+      rgba(234, 88, 12, 0.25),
+      transparent 60%
+    ),
+    #0a0a0a; /* deep dark base */
+  line-height: 1.5;
+}
+
+body {
+  background: radial-gradient(
+      1200px 600px at 50% -20%,
+      rgba(234, 88, 12, 0.25),
+      transparent 60%
+    ),
+    #0a0a0a; /* deep dark base */
+  line-height: 1.5;
+}
+
+.blob {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  background: rgba(234, 88, 12, 0.25);
+  border-radius: 50%;
+  filter: blur(120px);
+  transform: translate(-50%, -50%);
+  animation: blobMove 20s ease-in-out infinite;
+  z-index: 0; /* behind content but above background */
+}
+
+@keyframes blobMove {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-48%, -52%) scale(1.2);
+  }
 }

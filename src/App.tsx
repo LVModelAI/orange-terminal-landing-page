@@ -22,16 +22,12 @@ const ArrowIcon = () => (
 
 export default function App() {
   return (
-    <div
-      className="min-h-screen flex flex-col text-white"
-      style={{
-        background:
-          "radial-gradient(1200px 600px at 50% -20%, rgba(234,88,12,0.25), transparent 60%), #000",
-        lineHeight: "1.5",
-      }}
-    >
+    <div className="min-h-screen relative  bg-neutral-950  text-white">
+      {/* Animated Blob */}
+      <div className="blob" />
+
       {/* Nav: toned-down borders */}
-      <header className="sticky top-0 z-10 flex justify-between items-center px-6 py-5 border-b border-neutral-800 bg-black/60 backdrop-blur">
+      <header className="sticky top-0 z-10 flex justify-between items-center px-6 py-3  backdrop-blur ">
         <a
           href="/"
           className="flex items-center gap-2 hover:opacity-90 transition"
@@ -60,21 +56,20 @@ export default function App() {
             target="_blank"
             rel="noreferrer"
           >
-            Open App
-            <ArrowIcon />
+            Launch App
           </a>
         </nav>
       </header>
 
-      <main className="flex-1 flex flex-col gap-24">
+      <main className="flex-1 flex flex-col gap-24 z-10">
         {/* Hero: bigger spacing, neutral headline */}
         <section className="pt-28 pb-12 px-6 text-center max-w-6xl mx-auto">
           <h1 className="text-5xl sm:text-7xl font-bold tracking-tight mb-6">
-            Front Page of Defi AI on CORE
+            Front Page of Bitcoin Defi on CORE
           </h1>
           <p className="text-neutral-300 max-w-3xl mx-auto mb-10 text-lg">
-            Discover, analyze, and act on yield across staking, lending, and
-            liquidity — with one intent-first interface.
+            Your AI co-pilot for finding, analyzing, and executing the best BTC
+            opportunities on CORE.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a
@@ -99,7 +94,9 @@ export default function App() {
         <section id="features" className="px-6">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-semibold mb-8">
-              What you get
+              Welcome to{" "}
+              <span className="text-orange-400">Orange Terminal</span> - the
+              simplest portal to CORE!
             </h2>
             <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {[
@@ -112,7 +109,7 @@ export default function App() {
                   text: "Compare APYs across native staking, liquid staking, lending, and DEX LPs.",
                 },
                 {
-                  title: "Transaction builders",
+                  title: "One Click Transactions",
                   text: "Generate ready-to-sign payloads for staking, supplying, borrowing, and LPing.",
                 },
                 {
@@ -142,7 +139,7 @@ export default function App() {
               Ready to explore Bitcoin DeFi on Core?
             </h3>
             <p className="text-neutral-300 mb-6 max-w-2xl mx-auto">
-              Open the app, pick your intent, and execute in one smooth flow.
+              Open the app, ask, analyse, and execute.
             </p>
             <a
               className="group inline-flex items-center gap-2 px-7 py-3 rounded-xl font-semibold bg-orange-400 text-black hover:bg-orange-400 transition"
