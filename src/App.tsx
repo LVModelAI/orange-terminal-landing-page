@@ -22,12 +22,12 @@ const ArrowIcon = () => (
 
 export default function App() {
   return (
-    <div className="min-h-screen relative  bg-neutral-950  text-white">
+    <div className="min-h-screen  bg-neutral-950  text-white relative">
       {/* Animated Blob */}
       <div className="blob" />
 
       {/* Nav: toned-down borders */}
-      <header className="sticky top-0 z-10 flex justify-between items-center px-6 py-3  backdrop-blur ">
+      <header className="sticky top-0 z-10 flex justify-between items-center px-6 py-3 border-b border-neutral-800 bg-black/60 backdrop-blur">
         <a
           href="/"
           className="flex items-center gap-2 hover:opacity-90 transition"
