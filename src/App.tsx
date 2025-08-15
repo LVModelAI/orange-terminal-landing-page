@@ -148,7 +148,7 @@ export default function App() {
         </section>
 
         {/* CTA band: roomy, neutral, orange only on button */}
-        <section className="px-6 ">
+        <section className="px-6 z-20">
           <div className="max-w-6xl mx-auto rounded-3xl border border-neutral-800 bg-neutral-950/60 p-10 text-center">
             <h3 className="text-3xl font-semibold mb-3">
               Ready to explore Bitcoin DeFi on Core?
