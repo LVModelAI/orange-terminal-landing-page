@@ -1,123 +1,205 @@
-import React from 'react'
+import React from "react";
 
 const ArrowIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-    <path d="M13 5l7 7-7 7M5 12h14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width="24"
+    height="24"
+    aria-hidden="true"
+    className="transition-transform duration-200 group-hover:translate-x-1"
+  >
+    <path
+      d="M13 5l7 7-7 7M5 12h14"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
   </svg>
-)
+);
 
 export default function App() {
   return (
-    <div className="page">
-      <header className="nav">
-        <div className="brand">
-          <img src="/favicon.ico" alt="" className="dot" />
-          <span>Orange&nbsp;Terminal</span>
-        </div>
-        <nav className="links">
-          <a href="#features">Features</a>
-          <a href="#how">How it works</a>
-          <a href="#builders">For builders</a>
-          <a className="cta" href="https://app.orangeterminal.com" target="_blank" rel="noreferrer">Open App</a>
+    <div
+      className="min-h-screen flex flex-col text-white"
+      style={{
+        background:
+          "radial-gradient(1200px 600px at 50% -20%, rgba(234,88,12,0.25), transparent 60%), #000",
+        lineHeight: "1.5",
+      }}
+    >
+      {/* Nav: toned-down borders */}
+      <header className="sticky top-0 z-10 flex justify-between items-center px-6 py-5 border-b border-neutral-800 bg-black/60 backdrop-blur">
+        <a
+          href="/"
+          className="flex items-center gap-2 hover:opacity-90 transition"
+        >
+          <img
+            src="/images/orange-terminal.png"
+            alt="Orange Terminal"
+            width={40}
+            height={40}
+            className="drop-shadow-[0_0_6px_rgba(234,88,12,0.5)]"
+          />
+          <span className="text-xl font-semibold text-orange-400 ">
+            Orange Terminal
+          </span>
+        </a>
+        <nav className="flex gap-5 items-center">
+          <a
+            href="#features"
+            className="hidden sm:inline-block text-neutral-300 hover:text-white transition"
+          >
+            Features
+          </a>
+          <a
+            className="group inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold bg-orange-400 text-black hover:bg-orange-400 transition"
+            href="https://app.orangeterminal.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open App
+            <ArrowIcon />
+          </a>
         </nav>
       </header>
 
-      <main>
-        <section className="hero">
-          <h1>Front Page of Bitcoin DeFi on CORE</h1>
-          <p className="lead">
-            Discover, analyze, and act on yield across staking, lending, and liquidity — with one intent-first interface.
+      <main className="flex-1 flex flex-col gap-24">
+        {/* Hero: bigger spacing, neutral headline */}
+        <section className="pt-28 pb-12 px-6 text-center max-w-6xl mx-auto">
+          <h1 className="text-5xl sm:text-7xl font-bold tracking-tight mb-6">
+            Front Page of Defi AI on CORE
+          </h1>
+          <p className="text-neutral-300 max-w-3xl mx-auto mb-10 text-lg">
+            Discover, analyze, and act on yield across staking, lending, and
+            liquidity — with one intent-first interface.
           </p>
-          <div className="hero-actions">
-            <a className="btn primary" href="https://app.orangeterminal.com" target="_blank" rel="noreferrer">
+          <div className="flex flex-wrap gap-4 justify-center">
+            <a
+              className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold bg-orange-400 text-black hover:bg-orange-400 transition"
+              href="https://app.orangeterminal.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               Open App
               <ArrowIcon />
             </a>
-            <a className="btn ghost" href="#features">See what it does</a>
-          </div>
-          <div className="hero-card">
-            <div className="row">
-              <span>Live projection</span>
-              <strong>4.65% BTC staking</strong>
-            </div>
-            <div className="row">
-              <span>CORE staked</span>
-              <strong>240M+</strong>
-            </div>
-            <div className="row">
-              <span>DeFi TVL</span>
-              <strong>$386M+</strong>
-            </div>
-            <small className="muted">Figures are illustrative. Check Core Scan for current metrics.</small>
+            <a
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-neutral-800 bg-transparent hover:bg-neutral-900 transition"
+              href="#features"
+            >
+              See what it does
+            </a>
           </div>
         </section>
 
-        <section id="features" className="section features">
-          <h2>What you get</h2>
-          <ul className="cards">
-            <li>
-              <h3>Intent‑centric UX</h3>
-              <p>Say what you want — “best CORE yield” — and get one‑click actions.</p>
-            </li>
-            <li>
-              <h3>Cross‑protocol search</h3>
-              <p>Compare APYs across native staking, liquid staking, lending, and DEX LPs.</p>
-            </li>
-            <li>
-              <h3>Transaction builders</h3>
-              <p>Generate ready‑to‑sign payloads for staking, supplying, borrowing, and LPing.</p>
-            </li>
-            <li>
-              <h3>Portfolio view</h3>
-              <p>See staked CORE, BTC positions, pending rewards, and validator details.</p>
-            </li>
-          </ul>
-        </section>
-
-        <section id="how" className="section how">
-          <h2>How it works</h2>
-          <ol className="steps">
-            <li><strong>Connect</strong> your wallet on Core mainnet.</li>
-            <li><strong>Ask</strong> for an outcome — yield, stake, supply, or swap.</li>
-            <li><strong>Review</strong> the best path from supported protocols and validators.</li>
-            <li><strong>Sign</strong> the prepared transaction. Done.</li>
-          </ol>
-          <div className="grid">
-            <div className="panel">
-              <h3>Supported intents</h3>
-              <ul>
-                <li>Stake CORE, Unstake, Claim</li>
-                <li>Liquid stake to stCORE, dual staking</li>
-                <li>Supply/borrow via Colend</li>
-                <li>Provide liquidity on DEX pools</li>
-              </ul>
-            </div>
-            <div className="panel">
-              <h3>Tooling under the hood</h3>
-              <ul>
-                <li>Core staking APIs for validator + rewards</li>
-                <li>Colend supply/borrow tx builders</li>
-                <li>Portfolio scanners for token balances</li>
-                <li>On‑chain data sources for APYs and TVL</li>
-              </ul>
-            </div>
+        {/* Features: airy grid, minimal orange accent bar */}
+        <section id="features" className="px-6">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-semibold mb-8">
+              What you get
+            </h2>
+            <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                {
+                  title: "Intent-centric UX",
+                  text: "Say what you want — “best CORE yield” — and get one-click actions.",
+                },
+                {
+                  title: "Cross-protocol search",
+                  text: "Compare APYs across native staking, liquid staking, lending, and DEX LPs.",
+                },
+                {
+                  title: "Transaction builders",
+                  text: "Generate ready-to-sign payloads for staking, supplying, borrowing, and LPing.",
+                },
+                {
+                  title: "Portfolio view",
+                  text: "See staked CORE, BTC positions, pending rewards, and validator details.",
+                },
+              ].map((item, idx) => (
+                <li
+                  key={idx}
+                  className="group relative rounded-r-2xl border border-neutral-800 bg-neutral-950/60 p-6 hover:border-neutral-700 transition"
+                >
+                  <span className="absolute left-0 top-0 h-1.5 w-16 rounded-br-xl bg-orange-400/50 group-hover:bg-orange-400/70 transition" />
+                  <h3 className="font-semibold mb-2 text-white">
+                    {item.title}
+                  </h3>
+                  <p className="text-neutral-400">{item.text}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
-        <section id="builders" className="section builders">
-          <h2>For builders</h2>
-          <p>
-            Orange Terminal exposes on‑chain and off‑chain search with transaction creation.
-            Integrate via API to power intent‑driven DeFi experiences in your app.
-          </p>
-          <a className="btn" href="https://app.orangeterminal.com" target="_blank" rel="noreferrer">Try the App</a>
+        {/* CTA band: roomy, neutral, orange only on button */}
+        <section className="px-6">
+          <div className="max-w-6xl mx-auto rounded-3xl border border-neutral-800 bg-neutral-950/60 p-10 text-center">
+            <h3 className="text-3xl font-semibold mb-3">
+              Ready to explore Bitcoin DeFi on Core?
+            </h3>
+            <p className="text-neutral-300 mb-6 max-w-2xl mx-auto">
+              Open the app, pick your intent, and execute in one smooth flow.
+            </p>
+            <a
+              className="group inline-flex items-center gap-2 px-7 py-3 rounded-xl font-semibold bg-orange-400 text-black hover:bg-orange-400 transition"
+              href="https://app.orangeterminal.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Launch Orange Terminal
+              <ArrowIcon />
+            </a>
+          </div>
         </section>
       </main>
 
-      <footer className="footer">
+      {/* Footer: neutral border, neutral hover */}
+      <footer className="flex justify-between items-center px-6 py-6 border-t border-neutral-800 text-neutral-500 text-sm mt-6">
         <div>© {new Date().getFullYear()} Orange Terminal</div>
-        <a href="https://app.orangeterminal.com" target="_blank" rel="noreferrer">app.orangeterminal.com</a>
+        <a
+          href="https://github.com/LVModelAI/orange-terminal-v2"
+          target="_blank"
+          rel="noreferrer"
+          className="flex items-center gap-2 hover:text-neutral-300 transition"
+          aria-label="GitHub repository"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 
+               3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 
+               0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61 
+               -.546-1.387-1.333-1.757-1.333-1.757 
+               -1.089-.744.084-.729.084-.729 
+               1.205.084 1.84 1.237 1.84 1.237 
+               1.07 1.835 2.809 1.305 3.495.998 
+               .108-.775.418-1.305.762-1.605 
+               -2.665-.3-5.466-1.332-5.466-5.93 
+               0-1.31.468-2.38 1.235-3.22 
+               -.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23 
+               .96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 
+               2.28-1.552 3.285-1.23 3.285-1.23 
+               .645 1.653.24 2.873.12 3.176 
+               .765.84 1.23 1.91 1.23 3.22 
+               0 4.61-2.805 5.625-5.475 5.92 
+               .43.372.81 1.102.81 2.222 
+               0 1.606-.015 2.896-.015 3.286 
+               0 .315.21 .69 .825 .57 
+               C20.565 22.092 24 17.592 24 12.297 
+               c0-6.627-5.373-12-12-12"
+            />
+          </svg>
+        </a>
       </footer>
     </div>
-  )
+  );
 }
