@@ -61,13 +61,13 @@ export default function App() {
         </nav>
       </header>
 
-      <main className="flex-1 flex flex-col gap-24 z-10">
+      <main className="flex-1 flex flex-col gap-10 z-10 ">
         {/* Hero: bigger spacing, neutral headline */}
-        <section className="pt-28 pb-12 px-6 text-center max-w-6xl mx-auto">
-          <h1 className="text-5xl sm:text-7xl font-bold tracking-tight mb-6">
-            Front Page of Bitcoin Defi on CORE
+        <section className="min-h-screen flex flex-col justify-center items-center px-6 text-center max-w-6xl mx-auto relative">
+          <h1 className="text-5xl sm:text-7xl font-bold tracking-tight mb-5">
+            Front Page of Bitcoin DeFi on CORE
           </h1>
-          <p className="text-neutral-300 max-w-3xl mx-auto mb-10 text-lg">
+          <p className="text-neutral-300 max-w-3xl mx-auto mb-15 text-lg">
             Your AI co-pilot for finding, analyzing, and executing the best BTC
             opportunities on CORE.
           </p>
@@ -81,19 +81,34 @@ export default function App() {
               Open App
               <ArrowIcon />
             </a>
-            <a
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-neutral-800 bg-transparent hover:bg-neutral-900 transition"
-              href="#features"
-            >
-              See what it does
-            </a>
           </div>
+
+          {/* Scroll Down */}
+          <a
+            href="#features"
+            className="absolute bottom-20 flex flex-col items-center  text-neutral-400 hover:text-white transition"
+          >
+            <span className="font-medium">See what it does</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="animate-bounce"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </a>
         </section>
 
         {/* Features: airy grid, minimal orange accent bar */}
-        <section id="features" className="px-6">
+        <section id="features" className="px-6 mb-20">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-semibold mb-8">
+            <h2 className="text-3xl sm:text-4xl font-semibold mb-15">
               Welcome to{" "}
               <span className="text-orange-400">Orange Terminal</span> - the
               simplest portal to CORE!
@@ -133,7 +148,7 @@ export default function App() {
         </section>
 
         {/* CTA band: roomy, neutral, orange only on button */}
-        <section className="px-6">
+        <section className="px-6 ">
           <div className="max-w-6xl mx-auto rounded-3xl border border-neutral-800 bg-neutral-950/60 p-10 text-center">
             <h3 className="text-3xl font-semibold mb-3">
               Ready to explore Bitcoin DeFi on Core?
