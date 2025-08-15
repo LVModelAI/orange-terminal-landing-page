@@ -51,7 +51,7 @@ export default function App() {
             Features
           </a>
           <a
-            className="group inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold bg-orange-400 text-black hover:bg-orange-400 transition"
+            className="group inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold bg-zinc-900 text-white hover:bg-orange-400 transition border border-orange-400"
             href="https://app.orangeterminal.com"
             target="_blank"
             rel="noreferrer"
